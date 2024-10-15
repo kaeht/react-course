@@ -1,27 +1,33 @@
 //importar
 import React from "react";
+import Result from "./components/result/result";
+import Button from "./components/button/button";
+import MathOperations from "./components/math-operations/mathOperations";
 import './App.css';
+
 
 // generar funcionalidad (funcion flecha)
 const App  =  () => {
+
+    const clickHandlerFunction = text => {
+        console.log("Button.clickHandler", text)
+    }
     //Lo que hace la funcion
     console.log("Renderizacion de la App");
     return (
     <main className="react-calculator">
-        <div className="result">
-
-        </div>
+        <Result />
         <div className="numbers">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
-                <button>0</button>
+                <Button text="1" clickHandler={clickHandlerFunction}/>
+                <Button text="2" clickHandler={clickHandlerFunction}/>
+                <Button text="3" clickHandler={clickHandlerFunction}/>
+                <Button text="4" clickHandler={clickHandlerFunction}/>
+                <Button text="5" clickHandler={clickHandlerFunction}/>
+                <Button text="6" clickHandler={clickHandlerFunction}/>
+                <Button text="7" clickHandler={clickHandlerFunction}/>
+                <Button text="8" clickHandler={clickHandlerFunction}/>
+                <Button text="9" clickHandler={clickHandlerFunction}/>
+                <Button text="0" clickHandler={clickHandlerFunction}/>
         </div>
         <div className="functions">
              <button>
@@ -31,13 +37,7 @@ const App  =  () => {
                 r
              </button>
         </div>
-        <div className="math-operations">
-            <button>+</button>
-            <button>-</button>
-            <button>*</button>
-            <button>/</button>
-            <button>=</button>
-        </div>
+        <MathOperations />
     </main>
     )
 }
