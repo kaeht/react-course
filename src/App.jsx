@@ -3,6 +3,7 @@ import React from "react";
 import Result from "./components/result/result";
 import Button from "./components/button/button";
 import MathOperations from "./components/math-operations/mathOperations";
+import Functions from "./components/functions/functions";
 import './App.css';
 
 
@@ -29,14 +30,14 @@ const App  =  () => {
                 <Button text="9" clickHandler={clickHandlerFunction}/>
                 <Button text="0" clickHandler={clickHandlerFunction}/>
         </div>
-        <div className="functions">
-             <button>
-                clear
-             </button>
-             <button>
-                r
-             </button>
-        </div>
+        <Functions 
+            onContentClear={clear =>
+                console.log("Clear:", clear)
+            }
+            onDelete={deleted =>
+                console.log("Clear:", deleted)
+            }
+        />
         <MathOperations 
             onClickOperation={operation => 
                 console.log("Operacion:", operation)
