@@ -1,8 +1,10 @@
 //Importacion
 import React from "react"
 import PropTypes from "prop-types"
+import './button.css'
 
 //Logica o funcionalidad
+//type = button-long-text
 const Button = ({type, text, clickHandler}) =>
     {
         return (
