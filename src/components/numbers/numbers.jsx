@@ -10,6 +10,7 @@ const renderButtons = onClickNumber =>{
     //var number = 0
     //iterar desde el boton 1 al 0 (while, for, foreach)
     //var ArrayComponentes +=
+    //<Button text={number.toString()} clickHandler={onClickNumber} />
     const renderButton = number => (
         <Button 
             key={number} 

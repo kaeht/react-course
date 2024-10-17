@@ -15,7 +15,7 @@ const Result = ({value}) => (
     }
 
     Result.defaultProps ={
-        value: ""
+        value: "0"
     }
 
     //Exportacion
